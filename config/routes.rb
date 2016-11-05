@@ -42,6 +42,43 @@ Rails.application.routes.draw do
   #DELETE
   get("/delete_movie/:id", { :controller => "movies", :action => "destroy" })
 
+  #ACTOR ROUTES
+  #CREATE
+  get("actors/new_form", { :controller => "actors", :action => "new_form" })
+
+  get("/actors/create", { :controller => "actors", :action => "create_row" })
+
+  #READ
+  get("/actors", { :controller => "actors", :action => "index" })
+
+  get("actors/:id", { :controller => "actors", :action => "show" })
+
+  #UPDATE
+  get("/actors/:id/edit_form", { :controller => "actors", :action => "edit" })
+
+    get("/actors/update_row/:id", { :controller => "actors", :action => "update_row" })
+
+  #DELETE
+  get("/delete_actor/:id", { :controller => "actors", :action => "destroy" })
+
+  # #ROLES ROUTES
+  # #CREATE
+  # get("roles/new_form", { :controller => "roles", :action => "new_form" })
+  #
+  # get("/roles/create", { :controller => "roles", :action => "create_row" })
+  #
+  # #READ
+  # get("/roles", { :controller => "roles", :action => "index" })
+  #
+  # get("roles/:id", { :controller => "roles", :action => "show" })
+  #
+  # #UPDATE
+  # get("/roles/:id/edit_form", { :controller => "roles", :action => "edit" })
+  #
+  #   get("/roles/update_row/:id", { :controller => "roles", :action => "update_row" })
+  #
+  # #DELETE
+  # get("/delete_role/:id", { :controller => "roles", :action => "destroy" })
 
 
 end

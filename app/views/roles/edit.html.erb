@@ -1,0 +1,16 @@
+<h1>Edit Role <%=@role.id%></h1>
+
+<!-- need action -->
+<form action="/roles/update_row/<%=@role.id%>">
+
+  <label for="character_name">character_name</label>
+  <input type="text" id="character_name" name="character_name" placeholder="Character Name" value="<%=@role.character_name%>">
+
+  <label for="movie_id">movie_id</label>
+  <input type="text" id="movie_id" name="movie_id" placeholder="Movie ID" value="<%=@role.movie_id%>">
+
+  <label for="actor_id">Image URL</label>
+  <input type="text" id="actor_id" name="actor_id" placeholder="Actor ID" value="<%=@role.actor_id%>">
+
+  <button type="submit">Update Role</button>
+</form>
