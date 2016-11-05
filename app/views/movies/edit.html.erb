@@ -1,4 +1,4 @@
-<h1>Edit Director <%=@director.id%></h1>
+<h1>Edit Movie <%=@movie.id%></h1>
 
 <!-- need action -->
 <form action="/movies/update_row/<%=@movie.id%>">
@@ -17,5 +17,5 @@
   <label for="image_url">Image URL</label>
   <input type="text" id="image_url" name="image_url" placeholder="Image URL" value="<%=@movie.image_url%>">
 
-  <button type="submit">Update Director</button>
+  <button type="submit">Update Movie</button>
 </form>
