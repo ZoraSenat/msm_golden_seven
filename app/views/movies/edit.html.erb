@@ -1,0 +1,21 @@
+<h1>Edit Director <%=@director.id%></h1>
+
+<!-- need action -->
+<form action="/movies/update_row/<%=@movie.id%>">
+  <label for="title">title</label>
+  <input type="text" id="title" name="title" placeholder="title" value="<%=@movie.title%>">
+
+  <label for="year">year</label>
+  <input type="text" id="year" name="year" placeholder="year" value="<%=@movie.year%>">
+
+  <label for="duration">duration</label>
+  <input type="text" id="duration" name="duration" placeholder="duration" value="<%=@movie.duration%>">
+
+  <label for="description">description</label>
+  <input type="text" id="description" name="description" placeholder="description" value="<%=@movie.description%>">
+
+  <label for="image_url">Image URL</label>
+  <input type="text" id="image_url" name="image_url" placeholder="Image URL" value="<%=@movie.image_url%>">
+
+  <button type="submit">Update Director</button>
+</form>

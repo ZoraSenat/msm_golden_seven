@@ -1,0 +1,37 @@
+<h1>Directors</h1>
+<hr>
+<a href="directors/new_form"><button>Add A New Director</button></a>
+
+<table>
+  <tr>
+    <th>Image</th>
+    <th>DOB</th>
+    <th>Name</th>
+    <th>Bio</th>
+  </tr>
+  <% @list_of_directors.each do |director| %>
+  <tr>
+    <td>
+      <img src="<%= director.image_url %>" width="80">
+    </td>
+    <td>
+      <%= director.dob %>
+    </td>
+    <td>
+      <%= director.name %>
+    </td>
+    <td>
+      <%= truncate(director.bio, :length => 30) %>
+    </td>
+    <td>
+        <a href="/directors/<%= director.id %>">Show</a>
+    </td>
+    <td>
+        <a href="/directors/<%= director.id %>/edit_form">Edit</a>
+    </td>
+    <td>
+      <a href="/delete_director/<%= director.id %>">Delete</a>
+    </td>
+  </tr>
+  <% end %>
+</table>

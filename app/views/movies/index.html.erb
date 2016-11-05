@@ -1,4 +1,6 @@
 <h1>Movies</h1>
+<hr>
+<a href="movies/new_form"><button>Add A New Movie</button></a>
 
 <table>
   <tr>
@@ -6,13 +8,12 @@
     <th>Title</th>
     <th>Year</th>
     <th>Duration</th>
-    <th>Description</th>
-    <th>Director ID</th>
+        <th>Description</th>
   </tr>
   <% @list_of_movies.each do |movie| %>
   <tr>
     <td>
-      <img src="<%= movie.image_url %>">
+      <img src="<%= movie.image_url %>" width="80">
     </td>
     <td>
       <%= movie.title %>
@@ -24,19 +25,16 @@
       <%= movie.duration %>
     </td>
     <td>
-      <%= movie.description %>
+      <%= truncate(movie.description, :length => 30) %>
     </td>
     <td>
-      <%= movie.director %>
+        <a href="/movies/<%= movie.id %>">Show</a>
     </td>
     <td>
-      show
+        <a href="/<%= movie.id %>/edit_form">Edit</a>
     </td>
     <td>
-      edit
-    </td>
-    <td>
-      delete
+      <a href="/delete_movie/<%= movie.id %>">Delete</a>
     </td>
   </tr>
   <% end %>

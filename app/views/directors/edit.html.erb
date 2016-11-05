@@ -1,0 +1,18 @@
+<h1>Edit Director <%=@director.id%></h1>
+
+<!-- need action -->
+<form action="/directors/update_row/<%=@director.id%>">
+  <label for="dob">DOB</label>
+  <input type="text" id="dob" name="dob" placeholder="DOB" value="<%=@director.dob%>">
+
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" placeholder="Name" value="<%=@director.name%>">
+
+  <label for="bio">Bio</label>
+  <input type="text" id="bio" name="bio" placeholder="Bio" value="<%=@director.bio%>">
+
+  <label for="image_url">Image URL</label>
+  <input type="text" id="image_url" name="image_url" placeholder="Image URL" value="<%=@director.image_url%>">
+
+  <button type="submit">Update Director</button>
+</form>
